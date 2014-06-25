@@ -1,0 +1,9 @@
+package hello;
+
+public class HelloServiceProxy extends helloService {
+	
+	@Override
+	public void sayHello(String name) {
+		super.sayHello(name);
+	}
+}

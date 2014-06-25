@@ -1,0 +1,17 @@
+package emp;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class EmpApp {
+	
+	@Resource
+	EmpService empService;
+	
+	public void printName(){
+		System.out.println(empService.getEname(123))
+	}
+	
+}

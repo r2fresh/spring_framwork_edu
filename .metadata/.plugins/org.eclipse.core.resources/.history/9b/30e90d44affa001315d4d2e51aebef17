@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="bar" class="x.y.Bar"></bean>
+	<bean id="foo" class="x.y.Foo">
+		<constructor-arg ref="bar" />
+	</bean>
+	
+	
+	<bean id="helloService" class="hello.HelloServiceImpl"></bean>
+	<bean id="helloprinter" class="hello.HelloPrinter">
+		<constructor-arg ref="helloServie"></constructor-arg>
+	</bean>
+	
+</beans>

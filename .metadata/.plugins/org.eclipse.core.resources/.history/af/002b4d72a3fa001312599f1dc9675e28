@@ -1,0 +1,17 @@
+package x.y;
+
+import org.springframework.context.support.*;
+
+public class FooApp {
+	public static void main(String[] args){
+//		Bar bar = new Bar();
+//		Foo foo = new Foo(bar);
+		
+		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		o foo = ctx.getBean("foo", Foo.class);
+		
+		o.doFoo();
+		
+	})
+}

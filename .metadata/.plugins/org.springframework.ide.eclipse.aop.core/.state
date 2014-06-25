@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="Emp"/>
+<aop-project name="SpringAOP">
+<aspect-definition advice-class-name="util.Log" advice-method-name="trace(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="12" aspect-name="log" aspect-start-line-number="12" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/SpringAOP/src/main/resources/hello.xml" pointcut-expression="sayHelloPointcut()" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:SpringAOP|3:src/main/resources/hello.xml|7:beans:8|7:context:component-scan:11|8:worldService:11" bean-file="/SpringAOP/src/main/resources/hello.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/SpringAOP/src/main/resources/hello.xml" source="=SpringAOP/src\/main\/java&lt;util{Log.java[Log~trace~QProceedingJoinPoint;" source-start-line="17" target="=SpringAOP/src\/main\/java&lt;hello{WorldService.java[WorldService~sayHello~QString;" target-start-line="7"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:SpringAOP|3:src/main/resources/hello.xml|7:beans:8|7:context:component-scan:11|8:helloService:11" bean-file="/SpringAOP/src/main/resources/hello.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/SpringAOP/src/main/resources/hello.xml" source="=SpringAOP/src\/main\/java&lt;util{Log.java[Log~trace~QProceedingJoinPoint;" source-start-line="17" target="=SpringAOP/src\/main\/java&lt;hello{HelloService.java[HelloService~sayHello~QString;" target-start-line="7"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="SimpleSpringMaven"/>
+<aop-project name="EmpPrj">
+<aspect-definition advice-class-name="util.Log" advice-method-name="trace(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="12" aspect-name="log" aspect-start-line-number="12" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/EmpPrj/src/main/resources/emp.xml" pointcut-expression="sayHelloPointcut()" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:EmpPrj|3:src/main/resources/emp.xml|7:beans:8|7:context:component-scan:11|8:empDao:11" bean-file="/EmpPrj/src/main/resources/emp.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/EmpPrj/src/main/resources/emp.xml" source="=EmpPrj/src\/main\/java&lt;util{Log.java[Log~trace~QProceedingJoinPoint;" source-start-line="19" target="=EmpPrj/src\/main\/java&lt;emp{EmpDao.java[EmpDao~getEname~I" target-start-line="9"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:EmpPrj|3:src/main/resources/emp.xml|7:beans:8|7:context:component-scan:11|8:empService:11" bean-file="/EmpPrj/src/main/resources/emp.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/EmpPrj/src/main/resources/emp.xml" source="=EmpPrj/src\/main\/java&lt;util{Log.java[Log~trace~QProceedingJoinPoint;" source-start-line="19" target="=EmpPrj/src\/main\/java&lt;emp{EmpService.java[EmpService~getEname~I" target-start-line="14"/>
+</aspect-definition>
+</aop-project>
+</aop-reference-model>

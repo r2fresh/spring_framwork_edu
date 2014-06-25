@@ -1,0 +1,20 @@
+package hello;
+//핵심코드를 가진 타켓 클래
+public class helloService {
+	public void sayHello(String name){
+		System.out.println("Hello" + name);
+		
+		if(util.Log.DEBUG){
+			System.out.println("로그...");
+		}
+	}
+	
+	public void sayGoodbye(){
+		System.out.println("바이");
+	}
+}
+
+//sayHello 메소드가 호출 된 후 현재 시간을 로그로 남기세
+//포인트컷 : sayHello
+//어드바이스 : Log.i() + 메소드 호출 
+//타겟 : HelloService

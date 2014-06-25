@@ -1,0 +1,12 @@
+package world;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Application {
+	
+	public static void main(String[] args) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("world.xml");
+		WorldPrinter printer = context.getBean("worldPrinter",WorldPrinter.class);
+		printer.prinWorld();
+	}
+}

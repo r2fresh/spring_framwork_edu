@@ -1,0 +1,5 @@
+package hello;
+//핵심코드를 가진 타켓 클래
+public class helloService {
+
+}

@@ -1,0 +1,12 @@
+package emp;
+
+import org.springframework.stereotype.Service;
+
+@Service(value="empService")
+public class EmpDao implements EmpService{
+	
+	@Override
+	public String getEname(int empno){
+		return "Welcome ~ : " + name;
+	}
+}

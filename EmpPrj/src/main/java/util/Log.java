@@ -1,0 +1,33 @@
+package util;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+import org.aspectj.lang.Signature;
+
+@Aspect
+@Component
+public class Log {
+	
+	@Pointcut("execution(public * * .getEname(*))")
+	public void sayHelloPointcut(){}
+	
+	@Around("sayHelloPointcut()")
+	public Object trace(ProceedingJoinPoint joinPoint){
+		Signature s = joinPoint.getSignature();
+		long start = System.nanoTime();
+		Object o = null;
+		try{
+			o=joinPoint.proceed();
+		}catch(Throwable e){
+			System.out.println(e.getMessage());
+		}
+		
+		long end = System.nanoTime();
+		System.out.println("메소드 실행 시간 : " + (end-start));
+		return o;
+	};
+}

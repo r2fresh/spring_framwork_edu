@@ -1,0 +1,8 @@
+package x.y;
+
+public class Foo {
+	Bar bar;
+	public void doFoo(){
+		bar.doBar();
+	}
+}

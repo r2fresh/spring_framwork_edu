@@ -1,0 +1,19 @@
+package emp;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class EmpService implements IEmpService {
+	
+	@Resource
+	IEmpDao empDao;
+	
+	@Override
+	public String getEname(int empno) {
+		// TODO Auto-generated method stub
+		return empDao.getEname(empno);
+	}
+
+}

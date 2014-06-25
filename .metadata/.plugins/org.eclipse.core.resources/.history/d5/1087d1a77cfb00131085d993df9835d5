@@ -1,0 +1,12 @@
+package emp;
+
+import org.springframework.stereotype.Service;
+
+@Service(value="empService")
+public class WorldServiceimpl implements WorldService{
+	
+	@Override
+	public String welcome(String name){
+		return "Welcome ~ : " + name;
+	}
+}

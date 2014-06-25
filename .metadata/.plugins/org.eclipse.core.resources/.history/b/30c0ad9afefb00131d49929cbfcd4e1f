@@ -1,0 +1,11 @@
+package emp;
+
+public class EmpService implements IEmpService {
+
+	@Override
+	public String getEname(int empno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

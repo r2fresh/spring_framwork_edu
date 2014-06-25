@@ -1,0 +1,12 @@
+package emp;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class EmpApp {
+	
+	public void printName(){
+		System.out.println(empService.getEname(123))
+	}
+	
+}

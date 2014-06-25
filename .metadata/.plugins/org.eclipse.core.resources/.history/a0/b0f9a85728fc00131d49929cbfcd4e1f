@@ -1,0 +1,7 @@
+package hello;
+//핵심코드를 가진 타켓 클래
+public class helloService {
+	public void sayHello(String name){
+		System.out.println("Hello" + name);
+	}
+}

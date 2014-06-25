@@ -1,0 +1,12 @@
+package world;
+
+import org.springframework.stereotype.Service;
+
+@Service(value="ktService")
+public class KtServiceImpl implements WorldService{
+	
+	@Override
+	public String wecome(String name){
+		return "KT ~ :" + name;
+	}
+}

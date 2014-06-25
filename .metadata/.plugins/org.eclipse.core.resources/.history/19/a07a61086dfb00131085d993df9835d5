@@ -1,0 +1,9 @@
+package world;
+
+public class WorldServiceimpl implements WorldService{
+	
+	@Override
+	public String welcome(String name){
+		return "Welcome ~ : " + name;
+	}
+}
