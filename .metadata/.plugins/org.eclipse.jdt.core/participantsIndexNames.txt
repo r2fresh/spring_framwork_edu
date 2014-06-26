@@ -1,0 +1,5 @@
+INDEX VERSION 1.126
+/Users/ktds28/Documents/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/50783412.index
+/HelloSpringWeb/src/main/java
+/Users/ktds28/Documents/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3573773736.index
+/HelloSpringWeb/src/main/java

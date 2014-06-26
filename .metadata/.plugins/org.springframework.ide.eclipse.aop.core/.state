@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="Emp"/>
+<aop-project name="HelloSpringWeb"/>
 <aop-project name="SpringAOP">
 <aspect-definition advice-class-name="util.Log" advice-method-name="trace(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="12" aspect-name="log" aspect-start-line-number="12" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/SpringAOP/src/main/resources/hello.xml" pointcut-expression="sayHelloPointcut()" proxy-target-class="false">
 <aop-reference advice-type="AROUND" bean="1:BeansModel|2:SpringAOP|3:src/main/resources/hello.xml|7:beans:8|7:context:component-scan:11|8:worldService:11" bean-file="/SpringAOP/src/main/resources/hello.xml" bean-start-line="11" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/SpringAOP/src/main/resources/hello.xml" source="=SpringAOP/src\/main\/java&lt;util{Log.java[Log~trace~QProceedingJoinPoint;" source-start-line="17" target="=SpringAOP/src\/main\/java&lt;hello{WorldService.java[WorldService~sayHello~QString;" target-start-line="7"/>

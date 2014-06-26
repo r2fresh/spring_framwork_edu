@@ -1,0 +1,19 @@
+package kt.hello;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class HelloController {
+	
+	@Resource
+	HelloService helloService;
+	
+	public String hello(){
+		
+		return "hello"; // WEB-INF/view/hello.jsp
+		
+	}
+	
+}

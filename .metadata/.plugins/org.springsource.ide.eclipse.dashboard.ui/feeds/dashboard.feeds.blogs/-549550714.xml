@@ -15,7 +15,7 @@
     </author>
     <id>tag:spring.io,2014-06-24:1655</id>
     <updated>2014-06-24T22:47:00Z</updated>
-    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt; - this week I'm working with the amazing Vaadin team on building some ridiculously fun applications. Be ready for more on that soon! Also, the &lt;a href="http://www.springone2gx.com"&gt;SpringOne2GX 2013 early bird has been extended to June 30th&lt;/a&gt;, so register now!  Without further ado, onward:&lt;/p&gt;
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt; - this week I'm working with the amazing Vaadin team on building some ridiculously fun applications. Be ready for more on that soon! Also, the &lt;a href="http://www.springone2gx.com"&gt;SpringOne2GX 2014 early bird has been extended to June 30th&lt;/a&gt;, so register now!  Without further ado, onward:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;
@@ -35,8 +35,8 @@
 &lt;li&gt;Spring Data Gemfire and of course Gemfire itself represent a one-two punch for scale: horizontal scale-out combined with memory-based reads and writes. This talk, by Lyndon Adams from SpringOne2GX 2013, offers a very nice look at how &lt;a href="http://spring.io/blog/2014/06/24/springone2gx-2013-replay-real-time-event-processing-and-decision-making"&gt;to use Gemfire and Spring to contend with tidal data deluge that is the internet-of-things&lt;/a&gt;&lt;br&gt;
 &lt;/li&gt;
 &lt;li&gt;Want to use GORM from Spring Boot? Check out this  &lt;a href="https://gist.github.com/graemerocher/9683543"&gt;example by Grails-lead Graeme Rocher&lt;/a&gt;: so succinct!&lt;/li&gt;
-&lt;li&gt;Using the backbutton in a Spring Security-powered integration got you down? Check  &lt;a href="http://devjav.com/spring-security-browser-back-button/"&gt;out this post by Pham Thai Thinh&lt;/a&gt;.   This blog introduces ways that you can fast-expire resources which shouldn't be accessible from the browser history. Nice post! I'd perhaps revise the example to use Java configuration, but it's a nice example, either way. &lt;/li&gt;
-&lt;li&gt;Pham Thai Thinh &lt;em&gt;also&lt;/em&gt; did a nice post on using an existing JDBC-based table as &lt;a href="http://devjav.com/spring-security-using-jdbc-authentication/"&gt;the backend identity provider for Spring Security&lt;/a&gt;. &lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Using the backbutton in a Spring Security-powered integration got you down? Check  &lt;a href="http://devjav.com/spring-security-browser-back-button/"&gt;out this post by Pham Thai Thinh&lt;/a&gt;.   This blog introduces ways that you can fast-expire resources which shouldn't be accessible from the browser history. Nice post! I'd perhaps revise the example to use Java configuration, but it's a nice example, either way.    It's worth noting that  in Spring Security 3.2+ this can be done with the built in Spring Security headers support.  &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Pham Thai Thinh &lt;em&gt;also&lt;/em&gt; did a nice post on using an existing JDBC-based table as &lt;a href="http://devjav.com/spring-security-using-jdbc-authentication/"&gt;the backend identity provider for Spring Security&lt;/a&gt;. &lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;Gretty, which seems to be like the Maven ecosystem plugin Cargo for running web applications as part of the build, &lt;a href="http://akhikhl.github.io/gretty-doc/Feature-overview.html"&gt;except for Gradle, now supports Spring Boot applications, as well&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;Daniel Bryant has put &lt;a href="http://www.javacodegeeks.com/2014/05/implementing-correlation-ids-in-spring-boot-for-distributed-tracing-in-soamicroservices.html"&gt;together a nice post on implementing correlation IDs across (micro-)services powered by Spring Boot&lt;/a&gt;. This is a very handy thing to understand when dealing with, and tracking, state across multiple distributed components.&lt;br&gt;
 &lt;/li&gt;

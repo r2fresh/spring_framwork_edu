@@ -1,0 +1,17 @@
+package kt.hello;
+
+public class HelloService implements IHelloService {
+
+	@Override
+	public String sayHello(String naem) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String sayGoodbye() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

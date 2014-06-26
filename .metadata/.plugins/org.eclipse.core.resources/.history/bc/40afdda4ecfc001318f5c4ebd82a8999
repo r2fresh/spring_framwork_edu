@@ -1,0 +1,23 @@
+package kt.hello;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HelloController {
+	
+	@Resource
+	HelloService helloService;
+	
+	@RequestMapping("/hello.jk")
+	public String hello(HttpServletRequest request){
+		String result = helloService.sayHello("홍길동");
+		request.setAttribute("result", result);
+		return "hello"; // WEB-INF/view/hello.jsp		
+	}
+	
+}

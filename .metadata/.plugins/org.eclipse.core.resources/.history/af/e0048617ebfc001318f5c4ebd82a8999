@@ -1,0 +1,20 @@
+package kt.hello;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+@Controller
+public class HelloController {
+	
+	@Resource
+	HelloService helloService;
+	
+	public String hello(Model model){
+		String result = helloService.sayHello("홍길동");
+		
+		return "hello"; // WEB-INF/view/hello.jsp		
+	}
+	
+}

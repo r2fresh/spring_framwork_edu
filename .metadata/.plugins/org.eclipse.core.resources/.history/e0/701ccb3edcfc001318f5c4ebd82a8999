@@ -1,0 +1,24 @@
+package kt.hello;
+
+import org.apache.log4j.lf5.util.Resource;
+import org.springframework.stereotype.Service;
+
+@Service
+public class HelloService implements IHelloService {
+	
+	@Resource
+	HelloDao helloDao;
+	
+	@Override
+	public String sayHello(String naem) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String sayGoodbye() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

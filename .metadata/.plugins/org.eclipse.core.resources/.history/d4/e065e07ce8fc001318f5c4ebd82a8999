@@ -1,0 +1,5 @@
+package kt.hello;
+
+public class HelloController {
+
+}

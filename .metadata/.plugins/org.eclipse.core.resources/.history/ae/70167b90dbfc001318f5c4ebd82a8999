@@ -1,0 +1,17 @@
+package kt.hello;
+
+public class HelloDao implements IHelloDao {
+
+	@Override
+	public String sayHello(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String sayGoodbye() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

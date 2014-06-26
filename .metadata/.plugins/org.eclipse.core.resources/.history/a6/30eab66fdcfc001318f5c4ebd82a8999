@@ -1,0 +1,6 @@
+package kt.hello;
+
+public interface IHelloService {
+	String sayHello(String naem);
+	String sayGoodbye();
+}
