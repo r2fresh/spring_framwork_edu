@@ -1,0 +1,85 @@
+## 개발 환경 셋팅
+
+### 필수 애플리케이션 다운로드
+
+**Virtualbox**
+
+https://www.virtualbox.org/wiki/Downloads (ver 4.3.0 r89960)
+
+**Vagrant**
+
+http://downloads.vagrantup.com (ver 1.3.5)
+
+### 로컬 서버 설정
+
+**1.baas.io-Portal-2.0 repository clone**
+
+```shell
+$>mkdirworkspace
+~/workspace$>git clone git@github.com:baasio/baasio‐portal‐v2.0.git
+```
+
+**2.서버 환경 repository clone**
+```shell
+~/workspace$>git clone git@github.com:baasio/baas.io‐system.git_system
+~/workspace$>cd _system
+~/workspace$>git checkout develop
+```
+
+**3.Vagrantfile과 vagrant.box파일을 _develop에 복사**
+```shell
+~/workspace/_develop$>ls -a
+Vagrantfile baas.io_develop.box
+```
+
+**3.Vagrant 설정**
+```shell
+~/workspace$>cd~/workspace/_develop
+~/workspace/_develop$>vagrant box add bass.io_develop baas.io_develop.box ~/workspace/_develop$>vagrantup
+~/workspace/_develop$>vagrantssh
+```
+
+**4.Vagrant 안의 docker 실행**
+
+```shell
+//webRoot 폴더로 이동
+vagrant@precise64:~$
+cd /workspace/baasio‐portal‐v2.0/webRoot/
+
+//docker 실행
+vagrant@precise64:/workspace/baasio‐portal‐v2.0/webRoot$
+docker run ‐d ‐v=/workspace/baasio‐portal‐v2.0:/data/www:rw ‐v=/workspace/_system:/data/_system:rw ‐w=/data judekim/base‐web:0.8.2
+
+//vagrant에서 벗어남
+vagrant@precise64:/workspace/baasio‐portal‐v2.0/webRoot$
+exit
+```
+
+**5.__compile 폴더 생성**
+```shell
+~/workspace/_develop$>cd ~/workspace/baasio‐portal‐v2.0/php/baas
+~/workspace/baasio‐portal‐v2.0/php/baas$>mkdir_compile
+~/workspace/baasio‐portal‐v2.0/php/baas$>chmod777‐R_compile
+```
+
+**6.host 추가**
+```shell
+~/workspace/baasio‐portal‐v2.0/php/baas$>cd~/workspace
+~/workspace$>sudonano/private/etc/hosts 192.168.2.10local.baas.io
+```
+
+### 주의사항
+
+- 서버설정의 3번재 복사를 꼭하고 vagrant box의 추가를 한다. Vagrantfile이 없을 경우 만들어지지만, 내용은 주석으로만 표시된것이 나오고 설명만 있다. Vagrantfile이 있어야 box를 추가 할때 파일의 설정을 보고 제대로 실행이 된다.
+
+- host의 ip와 _develop폴더 안의 Vagrantfile에서 설정한 ip가 동일해야 local.baas.io가 실행이 된다.
+```shell
+config.vm.provider :virtualbox do |vb|
+    config.vm.box = "baas.io_develop"
+    #config.vm.box_url = BOX_URI
+    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+    vb.customize ["modifyvm", :id, "--memory", 512]
+    config.vm.network "private_network", ip: "192.168.3.10"
+  end
+```

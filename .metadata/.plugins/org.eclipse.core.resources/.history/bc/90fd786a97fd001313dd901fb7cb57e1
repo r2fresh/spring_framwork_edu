@@ -1,0 +1,10 @@
+package kt.hello;
+
+import java.util.Date;
+
+public class HelloVo {
+	private String username;
+	private int age;
+	private Date birthdate;
+	private String email;
+}

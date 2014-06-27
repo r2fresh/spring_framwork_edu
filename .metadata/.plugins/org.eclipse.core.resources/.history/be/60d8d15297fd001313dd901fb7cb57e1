@@ -1,0 +1,8 @@
+package kt.hello;
+
+public class HelloVo {
+	private String username;
+	private int age;
+	private Date birthdate;
+	private String email;
+}

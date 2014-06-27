@@ -5,7 +5,142 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2014-06-24T22:47:00Z</updated>
+  <updated>2014-06-26T09:01:00Z</updated>
+  <entry>
+    <title>Introducing the Spring IO Platform</title>
+    <link rel="alternate" href="https://spring.io/blog/2014/06/26/introducing-the-spring-io-platform" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2014-06-13:1640</id>
+    <updated>2014-06-26T09:01:00Z</updated>
+    <content type="html">&lt;p&gt;We're pleased to announce the release of &lt;em&gt;&lt;a href="http://spring.io/blog/2014/06/26/spring-io-platform-1-0-0-released"&gt;Spring IO 1.0&lt;/a&gt;&lt;/em&gt;! &lt;/p&gt;
+
+&lt;p&gt;Spring IO is first and foremost a &lt;em&gt;logical&lt;/em&gt;  description of what many of users will already know and use as a single, cohesive, harmonized platform, centered around Spring. &lt;/p&gt;
+
+&lt;h2&gt;
+&lt;a name="user-content-big-things-come-in-small-java-packages" class="anchor" href="#big-things-come-in-small-java-packages" aria-hidden="true"&gt;&lt;span class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Big Things Come in Small (Java) Packages&lt;/h2&gt;
+
+&lt;p&gt;The Spring IO platform includes &lt;em&gt;Foundation Layer&lt;/em&gt; modules and &lt;em&gt;Execution Layer&lt;/em&gt; domain-specific runtimes (DSRs). The Foundation Layer represents the core Spring modules and associated third-party dependencies that have been harmonized to ensure a smooth development experience. The DSRs provided by the Spring IO Execution Layer dramatically simplify building production-ready, JVM-based workloads. The first release of Spring IO includes two DSRs: Spring Boot and Grails. Spring XD will be added to the Spring IO platform later in 2014.&lt;/p&gt;
+
+&lt;p&gt;Spring supports many application workloads. Want to talk &lt;a href="http://spring.io/projects/spring-framework"&gt;to a datastore&lt;/a&gt;? &lt;a href="http://spring.io/projects/spring-data"&gt;A &lt;em&gt;big&lt;/em&gt;, or &lt;em&gt;specialized&lt;/em&gt; datastore&lt;/a&gt;? Build a &lt;a href="http://spring.io/projects/spring-batch"&gt;batch processing solution&lt;/a&gt;? &lt;a href="http://spring.io/projects/spring-integration"&gt;Integrate disparate systems and data&lt;/a&gt;? Work &lt;a href="http://spring.io/projects/spring-amqp"&gt;with AMQP&lt;/a&gt;? Use &lt;a href="http://groovy.codehaus.org/"&gt;the Groovy programming&lt;/a&gt; language &lt;a href="http://grails.org"&gt;to rapidly build web applications with Grails&lt;/a&gt;? Connect to an OAuth-secured REST service like that of &lt;a href="http://spring.io/projects/spring-social-twitter"&gt;Twitter&lt;/a&gt;, &lt;a href="http://spring.io/projects/spring-social-facebook"&gt;Facebook&lt;/a&gt;, or indeed &lt;a href="http://spring.io/projects/spring-security-oauth"&gt;any OAuth-secured service&lt;/a&gt;?  &lt;a href="http://spring.io/projects/spring-security"&gt;Secure an application&lt;/a&gt;? Build a &lt;a href="http://spring.io/projects/spring-framework"&gt;web application with REST, websockets and more&lt;/a&gt;? (&lt;a href="http://spring.io/projects/spring-hateoas"&gt;Using HATEOAS&lt;/a&gt;?) Connect to infrastructure services on your favorite &lt;a href="http://spring.io/projects/spring-cloud"&gt;Platform-as-a-Service (like Cloud Foundry)&lt;/a&gt;? Need to &lt;a href="http://github.com/reactor/"&gt;manage fast, reactive, concurrent, message and event dispatch&lt;/a&gt;? Expose &lt;a href="http://spring.io/projects/spring-ws"&gt;SOAP-powered web services&lt;/a&gt;? Need I go on? There's likely a solution &lt;a href="http://spring.io/projects"&gt;for you if you know where to look&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;With &lt;a href="http://spring.io/projects/spring-boot"&gt;Spring Boot&lt;/a&gt;, it's easy to pull these modules (and many more besides!) together into a solution driven by conventions. Spring Boot is a great way to bootstrap and simplify ongoing application development. &lt;/p&gt;
+
+&lt;h2&gt;
+&lt;a name="user-content-the-platform-in-a-bom" class="anchor" href="#the-platform-in-a-bom" aria-hidden="true"&gt;&lt;span class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;The Platform in a &lt;code&gt;BOM&lt;/code&gt;
+&lt;/h2&gt;
+
+&lt;p&gt;The Spring IO platform is also an &lt;em&gt;actual&lt;/em&gt; harmonization of APIs through a Maven Bill-of-Materials dependency. It's now easy to reason about which versions of which dependencies across the entire portfolio work together.  If you want to get the latest and greatest revisions of the APIs, simply update your Spring IO dependency. Spring IO, as a platform, also specifies known-to-work revisions of popular third-party libraries (like Hibernate).&lt;/p&gt;
+
+&lt;p&gt;Spring IO is, ultimately, just libraries on the &lt;code&gt;CLASSPATH&lt;/code&gt; of your application, though. You can choose to use specific versions of dependencies using your build tools' &lt;code&gt;&amp;lt;dependencyManagement/&amp;gt;&lt;/code&gt; facility. The version management is ultimately a suggestion and a convenience, not a &lt;em&gt;requirement&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Spring IO is certified to work with Java 1.7 and 1.8, though  specific projects under Spring IO will often work with even older JDKs, too. It requires only Java SE and supports Groovy, Grails, and some Java EE. As a platform, it can be deployed in embedded runtimes, classic applications server deployments, and PaaS environments.  &lt;/p&gt;
+
+&lt;h2&gt;
+&lt;a name="user-content-less-is-more" class="anchor" href="#less-is-more" aria-hidden="true"&gt;&lt;span class="octicon octicon-link"&gt;&lt;/span&gt;&lt;/a&gt;Less is More&lt;/h2&gt;
+
+&lt;p&gt;Here's an example of how you might use Spring IO. This is a simple Spring Boot REST endpoint that, when run, responds to HTTP requests of the form &lt;code&gt;http://127.0.0.1:8080/hello/SpringIO&lt;/code&gt;. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;hi/pom.xml&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class="highlight highlight-xml"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;project&lt;/span&gt; &lt;span class="na"&gt;xmlns=&lt;/span&gt;&lt;span class="s"&gt;"http://maven.apache.org/POM/4.0.0"&lt;/span&gt;
+         &lt;span class="na"&gt;xmlns:xsi=&lt;/span&gt;&lt;span class="s"&gt;"http://www.w3.org/2001/XMLSchema-instance"&lt;/span&gt;
+         &lt;span class="na"&gt;xsi:schemaLocation=&lt;/span&gt;&lt;span class="s"&gt;"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;modelVersion&amp;gt;&lt;/span&gt;4.0.0&lt;span class="nt"&gt;&amp;lt;/modelVersion&amp;gt;&lt;/span&gt;
+
+    &lt;span class="nt"&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.example&lt;span class="nt"&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;your-application&lt;span class="nt"&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.0.0-SNAPSHOT&lt;span class="nt"&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+
+    &lt;span class="c"&gt;&amp;lt;!-- our one dependency on Spring Boot's web support. No version. --&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;dependencies&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+            &lt;span class="nt"&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span class="nt"&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+            &lt;span class="nt"&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-web&lt;span class="nt"&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;
+
+    &lt;span class="c"&gt;&amp;lt;!-- Transitively bring in the Spring IO Platform Bill-of-Materials `pom.xml` --&amp;gt;&lt;/span&gt;    
+    &lt;span class="nt"&gt;&amp;lt;dependencyManagement&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;dependencies&amp;gt;&lt;/span&gt;
+            &lt;span class="nt"&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+                &lt;span class="nt"&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.spring.platform&lt;span class="nt"&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+                &lt;span class="nt"&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;platform-bom&lt;span class="nt"&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+                &lt;span class="nt"&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.0.0.RELEASE&lt;span class="nt"&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+                &lt;span class="nt"&gt;&amp;lt;type&amp;gt;&lt;/span&gt;pom&lt;span class="nt"&gt;&amp;lt;/type&amp;gt;&lt;/span&gt;
+                &lt;span class="nt"&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;import&lt;span class="nt"&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
+            &lt;span class="nt"&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/dependencyManagement&amp;gt;&lt;/span&gt;
+
+&lt;span class="nt"&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;hi/src/main/java/io/Application.java&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class="highlight highlight-java"&gt;&lt;pre&gt;
+&lt;span class="kn"&gt;package&lt;/span&gt; &lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;org.springframework.boot.SpringApplication&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;org.springframework.boot.autoconfigure.EnableAutoConfiguration&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;org.springframework.context.annotation.ComponentScan&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;org.springframework.context.annotation.Configuration&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;org.springframework.web.bind.annotation.PathVariable&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;org.springframework.web.bind.annotation.RequestMapping&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;org.springframework.web.bind.annotation.RestController&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+&lt;span class="nd"&gt;@Configuration&lt;/span&gt;
+&lt;span class="nd"&gt;@EnableAutoConfiguration&lt;/span&gt;
+&lt;span class="nd"&gt;@RestController&lt;/span&gt;
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Application&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;SpringApplication&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;run&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Application&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="nd"&gt;@RequestMapping&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"/hello/{name}"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="nf"&gt;hi&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nd"&gt;@PathVariable&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;"Hello, "&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;"!"&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There's a lot more to be said and read in the &lt;a href="http://docs.spring.io/platform/docs/current/reference/html/getting-started-using-spring-io-platform.html#getting-started-using-spring-io-platform-maven"&gt;exhaustive Spring IO documentation&lt;/a&gt;. It includes more examples and covers Gradle, as well. &lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring IO Platform 1.0.0 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2014/06/26/spring-io-platform-1-0-0-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2014-06-17:1643</id>
+    <updated>2014-06-26T09:00:00Z</updated>
+    <content type="html">&lt;p&gt;We're pleased to announce the release of Spring IO Platform 1.0.0 RELEASE, and represents some amazing engineering work.  The highlights of this release are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A Bill-of-Materials release (a Maven &lt;code&gt;BOM&lt;/code&gt; dependency) that level sets the versions for you.&lt;/li&gt;
+&lt;li&gt;Spring IO represents curated and harmonized dependencies that just work together - tests cover all the Spring projects and &lt;a href="http://docs.spring.io/platform/docs/1.0.0.RELEASE/reference/htmlsingle/#appendix-dependency-versions"&gt;lots of popular 3rd party open source&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt; One platform, many workloads - build web (HTML-, websocket-, and REST-powered web apps), mobile, integration, batch, reactive or big data applications, or just great APIs&lt;/li&gt;
+&lt;li&gt;Radically simplified development experience with Spring Boot&lt;/li&gt;
+&lt;li&gt;Production-ready features provided out of the box (monitoring, metrics, etc)&lt;/li&gt;
+&lt;li&gt;Modular platform that allows developers to deploy only the parts they need&lt;/li&gt;
+&lt;li&gt;True portability across standalone JVM, embedded runtimes, full-blown Java EE application server, and PaaS deployments like Cloud Foundry&lt;/li&gt;
+&lt;li&gt;Depends only on Java SE, and supports Groovy, Grails and some Java EE&lt;/li&gt;
+&lt;li&gt;Works with your existing dependency management tools such as Maven and Gradle&lt;/li&gt;
+&lt;li&gt;The Spring IO Platform is certified to work on JDK 7 and 8 (though individual projects may support older JDKs on a project-by-project basis)&lt;/li&gt;
+&lt;li&gt;Ideal platform for building next generation, micro-service style architecture&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Spring IO 1.0 is available now and includes all Spring Projects, with the exception of Spring XD, which is expected to be generally available later this year. Service, support and training for Spring IO is available from Pivotal at &lt;a href="http://spring.io/services"&gt;http://spring.io/services&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://platform.spring.io/platform/"&gt;Project Page&lt;/a&gt; | 
+ &lt;a href="http://docs.spring.io/platform/docs/1.0.0.RELEASE/reference/htmlsingle/"&gt;Reference&lt;/a&gt; &lt;/p&gt;
+
+&lt;p&gt;For additional information on the release, refer to &lt;a href="http://spring.io/blog/2014/06/26/introducing-the-spring-io-platform"&gt;this blog introducing the Spring IO platform&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - June 24, 2014</title>
     <link rel="alternate" href="https://spring.io/blog/2014/06/24/this-week-in-spring-june-24-2014" />
@@ -902,101 +1037,6 @@ We are anticipating that several in-depth Spring-Integration sessions will be pr
 &lt;p&gt;Tuesday, July 22nd, 2014 3:00 pm BST Time (London, UTC+1) &lt;a href="http://play.gopivotal.com/OSS_Webinar_WhydoIrecommendSpring7AM_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Tuesday,  July 22nd, 2014 10:00 am Pacific Daylight Time (San Francisco, UTC-07:00) &lt;a href="http://play.gopivotal.com/OSS_Webinar_WhydoIrecommendSpring10AM_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring for Apache Hadoop 2.0 is now GA</title>
-    <link rel="alternate" href="https://spring.io/blog/2014/06/11/spring-for-apache-hadoop-2-0-is-now-ga" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Thomas Risberg</name>
-    </author>
-    <id>tag:spring.io,2014-06-11:1636</id>
-    <updated>2014-06-11T11:03:00Z</updated>
-    <content type="html">&lt;p&gt;We are pleased to announce that Spring for Apache Hadoop version 2.0 is now GA. &lt;/p&gt;
-
-&lt;hr&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Providing support for Hadoop v2.0 and YARN while maintaining compatibility with Hadoop v1.0&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;It's been well over a year since Spring for Apache Hadoop 1.0 was &lt;a href="http://spring.io/blog/2013/02/26/spring-for-apache-hadoop-1-0-goes-ga"&gt;released&lt;/a&gt;. Spring was part of VMware at that time. Spring for Apache Hadoop 1.0 supported Hadoop 1.0.4 and 1.1.1 but not the latest 2.0 alpha versions. A lot has changed since then. Spring is now part of Pivotal which brings us together with a great portfolio of open source technologies. The Apache Hadoop project has released several new versions of Hadoop including 2.2.0 which introduces the YARN framework. So, it was only natural to keep moving the Spring for Apache Hadoop project forward. For the Spring for Apache Hadoop 2.0 release the major themes are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;provide support for new versions and distributions like
-
-&lt;ul&gt;
-&lt;li&gt;Apache Hadoop 2.2.0, 2.4.0&lt;/li&gt;
-&lt;li&gt;Pivotal HD 2.0&lt;/li&gt;
-&lt;li&gt;Cloudera CDH 5&lt;/li&gt;
-&lt;li&gt;Hortonworks HDP 2.1&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;maintain compatibility with Hadoop v1.0&lt;/li&gt;
-&lt;li&gt;provide a great programming model for developing YARN applications&lt;/li&gt;
-&lt;li&gt;add new features like
-
-&lt;ul&gt;
-&lt;li&gt;new writers and readers for working with HDFS data&lt;/li&gt;
-&lt;li&gt;new support for writing and reading POJO Datasets using the Kite SDK&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;We have &lt;a href="https://github.com/SpringSource/spring-hadoop-samples"&gt;sample&lt;/a&gt; applications available for showing how to use the more commonly used features. We also have some &lt;a href="http://spring.io/guides?filter=yarn"&gt;Spring IO Guides&lt;/a&gt; for developing Spring YARN applications.&lt;/p&gt;
-
-&lt;p&gt;The target distribution for the Spring for Apache Hadoop 2.0 GA release is the current Apache Hadoop v2 stable release which is 2.2.0. This is the version used for the 2.0.0.RELEASE's transitive dependencies.&lt;/p&gt;
-
-&lt;p&gt;For other versions or distributions we continue to provide specific artifacts with their respective transitive dependencies in the Spring IO release repository:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2.0.0.RELEASE (default - Apache Hadoop stable 2.2.0)&lt;/li&gt;
-&lt;li&gt;2.0.0.RELEASE-hadoop24 (Apache Hadoop latest 2.4.0)&lt;/li&gt;
-&lt;li&gt;2.0.0.RELEASE-hadoop12 (Apache Hadoop stable 1.2.1)&lt;/li&gt;
-&lt;li&gt;2.0.0.RELEASE-phd1 (Pivotal HD 1.1)&lt;/li&gt;
-&lt;li&gt;2.0.0.RELEASE-phd20 (Pivotal HD 2.0)&lt;/li&gt;
-&lt;li&gt;2.0.0.RELEASE-cdh4 (Cloudera CDH4 MR1)&lt;/li&gt;
-&lt;li&gt;2.0.0.RELEASE-cdh5 (Cloudera CDH5 YARN)&lt;/li&gt;
-&lt;li&gt;2.0.0.RELEASE-hdp13 (Hortonworks HDP 1.3)&lt;/li&gt;
-&lt;li&gt;2.0.0.RELEASE-hdp20 (Hortonworks HDP 2.0)&lt;/li&gt;
-&lt;li&gt;2.0.0.RELEASE-hdp21 (Hortonworks HDP 2.1)&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;For instructions on how to build with these versions see the &lt;a href="https://github.com/spring-projects/spring-hadoop/wiki#building-using-supported-distributions"&gt;project wiki&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The versions for Apache Hadoop 2.2.0, 2.4.0 and 1.2.1 are also available in the Maven Central repository.&lt;/p&gt;
-
-&lt;p&gt;For more project specific information please see the &lt;a href="http://projects.spring.io/spring-hadoop/"&gt;project page&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;SpringOne 2GX 2014 is around the corner&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Book your place at &lt;a href="http://www.springone2gx.com/"&gt;SpringOne in Dallas, TX&lt;/a&gt; for Sept 8-11 soon. It's simply the best opportunity to find out first hand all that's going on and to provide direct feedback. There will be deep dive sessions on Spring for Apache Hadoop along with general Big Data talks to provide an introduction to the landscape and challenges in developing Big Data applications.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring  - June 10th, 2014</title>
-    <link rel="alternate" href="https://spring.io/blog/2014/06/11/this-week-in-spring-june-10th-2014" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2014-06-10:1629</id>
-    <updated>2014-06-11T05:39:00Z</updated>
-    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;. This week has been an &lt;em&gt;amazing&lt;/em&gt; week! I started it in Krakow, Poland, talking to developers at the wonderful 33rd Degree conference, then headed to Warsaw, Poland, where I presented at the amazing local Spring Labs user group. Tomorrow, it's off to London for Devoxx UK where I'll be helping spread the Spring Boot awesome. Then, Friday, it's off to Toronto where I'll be meeting with 4 customers and teams using Spring next week. What's this mean for you? Well, for one, if you're in London and Toronto, &lt;a href="http://twitter.com/starbuxman"&gt;say hi&lt;/a&gt;! It also means that conference season is on in full force. We try to be wherever we're needed.  What conferences  (besides SpringOne2GX 2014, of course!) are you going to this year? I'd love to know which conferences you're doing this year.  Help us prioritize, please. Thanks! (Twitter hashtag &lt;code&gt;#twiSpring&lt;/code&gt;)&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href="http://spring.io/blog/2014/06/10/spring-boot-1-1-ga-released"&gt;Spring Boot 1.1's been released&lt;/a&gt;! It includes new support for GSP, Spring Social, Velocity, Freemarker, Spring Mobile, Spring HATEOAS, and much, much, more. LOTS of new autoconfiguration support too:  GemFire, HornetQ, Elasticsearch, Solr, Spring Social, Spring Integration, Spring Mobile and Spring HATEOAS. Honestly, you might just be better off reading the blog and coming back. There's so much awesome there. &lt;/li&gt;
-&lt;li&gt;Our &lt;a href="http://cfsummit.com/"&gt;CFSummit&lt;/a&gt; conference is being held right now in San Francisco! There's lots of amazing stuff around Cloud Foundry. I found more than a few press announcements, but here's &lt;a href="http://www.eweek.com/developer/pivotal-cf-paas-gains-new-enterprise-features.html"&gt;one from eWeek on some of the new stuff in PCF 1.3&lt;/a&gt;. &lt;/li&gt;
-&lt;li&gt;If you are not the the CloudFoundry Summit in San Francisco this week, you may have missed Matt Stine's amazing talk: &lt;a href="https://2014.event.cfsummit.com/schedule/536d7bbcecdcc4a5a8000023"&gt;Cloud Foundry and Microservices: A Mutualistic Symbiotic Relationship&lt;/a&gt;. You heard it here first: CloudFoundry and Spring Boot are going to make a killer combination for Microservices.&lt;/li&gt;
-&lt;li&gt;In celebration of the Spring Boot release, the amazing Greg Turnquist is presenting &lt;a href="http://spring.io/blog/2014/06/10/webinar-building-your-app-management-tools-with-spring-boot"&gt;Building your app management tools with Spring Boot&lt;/a&gt; on July 8th.&lt;/li&gt;
-&lt;li&gt;Join Glenn Renfro as he  takes you through Spring Integration 4.0's Boot/JavaConfig/Annotation driven experience in &lt;a href="http://spring.io/blog/2014/05/27/webinar-spring-integration-done-boot-ifully"&gt;Spring Integration Done Boot-ifully&lt;/a&gt; on June 17th.&lt;/li&gt;
-&lt;li&gt;Casey Doolittle and Phil Dutson present the ultimate e-commerce feature fire drill: &lt;a href="http://spring.io/blog/2014/06/10/webinar-building-a-shopping-cart-in-24-hours-using-spring"&gt;Building a Shopping Cart in 24 Hours using Spring&lt;/a&gt; on July 15th &lt;/li&gt;
-&lt;li&gt;Check out this replay of the talk from last year's SpringOne2GX 2013, &lt;a href="http://spring.io/blog/2014/06/10/springone2gx-2013-replay-space-exploration-apis-for-secure-interconnected-html5-applications-with-sencha-space"&gt;SpringOne2GX 2013 Replay: Space Exploration: APIs for Secure Interconnected HTML5 Applications with Sencha Space&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;The amazing &lt;a href="http://twitter.com/habuma"&gt;Craig Walls&lt;/a&gt; gave a great &lt;a href="http://spring.io/blog/2014/06/10/springone2gx-2013-replay-making-connections-with-spring-social"&gt;talk on Spring Social last year at SpringOne2GX 2013&lt;/a&gt;, check it out! Spring Social 1.1 just dropped, after all. Now's a good time to catch up and get connected to the services your customers are. &lt;/li&gt;
-&lt;li&gt;Greg Turnquist  published a very nice  blog on &lt;a href="http://spring.io/blog/2014/06/05/first-community-written-getting-started-guide-is-published"&gt;the process of contributing a Spring IO guide&lt;/a&gt;. Greg's also one of the main contributors to the guides, so if he approves, then you know it's good. Rock on, open source! &lt;/li&gt;
-&lt;li&gt;Speaking of that new guide, you should check it out: it's about how to  get &lt;a href="http://spring.io/guides/gs/producing-web-service"&gt;started building a SOAP service with Spring WS&lt;/a&gt;. (Hey, it's still a thing for a lot of people, and Spring WS's new Java configuration-based endpoint model is very well suited to the task!)&lt;/li&gt;
-&lt;li&gt;Ramnivas Laddad, one of the brains behind AspectJ, one of the   architects behind Cloud Foundry, and our local cloud ninja, recently did a webinar  on Spring Cloud, which makes it easy to consume PaaS-bound services in a clean, &lt;a href="http://spring.io/blog/2014/06/04/webinar-replay-abstracting-paas-services-to-be-portable-with-spring-cloud"&gt;dependency-injection centric way&lt;/a&gt;: check it out!&lt;/li&gt;
-&lt;li&gt;Manuel Jordan, an amazing member of our community (editor on a few of my books, winner of the Springy Award for his amazing contributions on the forum where he answered more questions than anyone, and all around nice guy) in Arequipa, Peru, put together an &lt;a href="http://manueljordanelera.blogspot.com/2014/06/springroadmap.html"&gt;&lt;em&gt;epic&lt;/em&gt; series of blogs introducing various parts of Spring. Check them out&lt;/a&gt;.  Great job, Manuel!&lt;/li&gt;
-&lt;li&gt;The &lt;em&gt;softwarecave&lt;/em&gt; blog has a  post on using Hibernate with Spring. I dig it, but would remind people that there's little to no reason to use XML anymore, and - even if there were  a reason, there's little to no reason to write this sort of configuration anymore, at all. Just use Spring Boot. It's amazing what a difference an &lt;code&gt;@EnableAutoConfiguration&lt;/code&gt; makes!&lt;/li&gt;
-&lt;li&gt;The &lt;code&gt;GeekAByte&lt;/code&gt; blog has a nice post  &lt;a href="http://geekabyte.blogspot.nl/2014/06/how-to-autowire-bean-with-constructor.html"&gt;on the various types of annotation-centric autowiring possible with Spring&lt;/a&gt;. Check it out!&lt;/li&gt;
-&lt;/ul&gt;</content>
   </entry>
 </feed>
 

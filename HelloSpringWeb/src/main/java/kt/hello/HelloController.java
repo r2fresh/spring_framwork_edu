@@ -4,6 +4,9 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,8 +25,8 @@ public class HelloController {
 	}
 	
 	@RequestMapping(value="/hello.do", method=RequestMethod.GET)
-	public String helloGet(HttpServletRequest request) {
-		request.setAttribute("result", "GET방식을 지원하지 않아요");
+	public String helloGet(Model model) {
+		model.addAttribute("result", "GET방식을 지원하지 않아요.");
 		return "hello";
 	}
 
@@ -31,5 +34,14 @@ public class HelloController {
 	@RequestMapping("/go.do")
 	public String go(@RequestParam String url){
 		return url;
+	}
+	
+	@RequestMapping("/insert.do")
+	public String insert(@Validated HelloVo vo, BindingResult result, Model model) {
+		
+		model.addAttribute("name", vo.getUsername());
+		model.addAttribute("birth", vo.getBirthdate().toString());
+		
+		return "insertok";
 	}
 }	
